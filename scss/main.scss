@@ -78,6 +78,18 @@ body {
   font-size: 28px;
 }
 
+.button-nav {
+  color: #D94343;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+path {
+  fill: #D94343;
+}
+
 .aim {
   min-height: 544px;
   background-repeat: no-repeat;
@@ -178,35 +190,37 @@ body {
 }
 
 .categories__item {
-  flex-direction: column;
-  justify-content: center;
-  width: 350px;
-  min-height: 419px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ min-height: 420px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ 
+  
 }
 
 .categories-men {
   background-image: url(../img/men.jpg);
+  background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .categories-women {
   background-image: url(../img/women.jpg);
+  background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .accessories {
   background-image: url(../img/accessories.jpg);
+  background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .categories__link {
@@ -271,6 +285,7 @@ body {
 
 .blog {
   padding-top: 0;
+  padding-bottom: 86px;
 }
 
 .blog__list {
@@ -284,7 +299,6 @@ body {
 .blog__img {
   width: 100%;
   height: 344px;
-  -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 20px;
 }
@@ -358,6 +372,9 @@ span:last-child::after {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 157px;
   background-image: url(../img/footer.jpg);
   background-repeat: no-repeat;
@@ -387,4 +404,35 @@ span:last-child::after {
   padding-left: 177px;
 }
 
+@media screen and (max-width: 991px) {
+  .header {
+    &__item + &__item {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+  .collapse {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .aim__title {
+    font-size: 20px;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  .categories__item {
+    margin-left: 25px;
+  }
+
+  .blog__item {
+    margin-left: 25px;
+    margin-bottom: 30px;
+  }
+}
 
